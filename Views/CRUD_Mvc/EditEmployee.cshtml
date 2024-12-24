@@ -1,0 +1,102 @@
+@model Employees
+
+<form method="post" asp-action="Edit">
+  <div class="border p-3 mt-4">
+    <div class="row pb-2">
+      <h2 class="Text primary">Edit Employee</h2>
+      <hr />
+    </div>
+
+    <div asp-validation-summary="All"></div>
+
+    <div class="row">
+      <input type="hidden" asp-for="EmployeeID" />
+
+      <div class="col-md-6">
+        <div class="mb-3">
+            <label asp-for="LastName"></label>
+            <input required asp-for="LastName" class="form-control"/>
+            <span asp-validation-for="LastName" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="FirstName"></label>
+            <input asp-for="FirstName" class="form-control"/>
+            <span asp-validation-for="FirstName" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="Title"></label>
+            <input asp-for="Title" class="form-control"/>
+            <span asp-validation-for="Title" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="TitleOfCourtesy"></label>
+            <input asp-for="TitleOfCourtesy" class="form-control"/>
+            <span asp-validation-for="TitleOfCourtesy" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="BirthDate"></label>
+            <input asp-for="BirthDate" class="form-control"/>
+            <span asp-validation-for="BirthDate" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="HireDate"></label>
+            <input asp-for="HireDate" class="form-control"/>
+            <span asp-validation-for="HireDate" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="Address"></label>
+            <input asp-for="Address" class="form-control"/>
+            <span asp-validation-for="Address" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="City"></label>
+            <input asp-for="City" class="form-control"/>
+            <span asp-validation-for="City" class="text-danger"></span>
+        </div>
+      </div>
+
+      <div class="col-md-6"> 
+        <div class="mb-3">
+            <label asp-for="Region"></label>
+            <input asp-for="Region" class="form-control"/>
+            <span asp-validation-for="Region" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="PostalCode"></label>
+            <input asp-for="PostalCode" class="form-control"/>
+            <span asp-validation-for="PostalCode" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="Country"></label>
+            <input asp-for="Country" class="form-control"/>
+            <span asp-validation-for="Country" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="HomePhone"></label>
+            <input asp-for="HomePhone" class="form-control"/>
+            <span asp-validation-for="HomePhone" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="Extension"></label>
+            <input asp-for="Extension" class="form-control"/>
+            <span asp-validation-for="Extension" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="ReportsTo"></label>
+            <input asp-for="ReportsTo" class="form-control"/>
+            <span asp-validation-for="ReportsTo" class="text-danger"></span>
+        </div>
+
+        <button type="submit" class="btn btn-outline-primary" asp-action="EditEmployee">Save</button>
+        <a asp-controller="CRUD_MVC" asp-action="Index" class="btn btn-outline-dark">Back</a>
+      </div>
+    </div>
+  </div>
+</form>
+
+@section Scripts
+{
+    @{
+        <partial name="_ValidationScriptsPartial" />
+    }
+}

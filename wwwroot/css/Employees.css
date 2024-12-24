@@ -1,0 +1,45 @@
+body
+{
+  text-align: center;
+  
+}
+
+table th,
+table td {
+  white-space: nowrap;
+  padding: 8px;
+  border: 1px solid #ddd;
+  text-align: center;
+  
+}
+
+table {
+  width: 100%;
+  
+}
+a:hover
+{
+  transition: 0.3s;
+  opacity: 50%;
+}
+.container
+{
+  margin-left: 65px;
+  margin-right: auto;
+}
+
+.title
+{
+  text-align: left;
+  color:Black;
+  
+}
+.add-Button
+{
+  text-align: left;
+  margin-left: -1167px;
+  margin-right: auto;
+  margin-bottom: 3px;
+  vertical-align: row;
+  justify-content: center;
+}
